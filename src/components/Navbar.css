@@ -5,7 +5,11 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: relative;
+
+  /* 🔒 Sticky */
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .navbar h2 {
@@ -13,7 +17,7 @@
   margin: 0;
 }
 
-/* Links desktop */
+/* ================= LINKS DESKTOP ================= */
 .nav-links {
   display: flex;
   gap: 1rem;
@@ -29,16 +33,17 @@
   color: #e91e63;
 }
 
-/* Botón hamburguesa */
+/* ================= BOTÓN HAMBURGUESA ================= */
 .menu-btn {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
+  color: #e91e63;
 }
 
-/* 📱 MÓVIL */
+/* ================= 📱 MÓVIL ================= */
 @media (max-width: 768px) {
 
   .menu-btn {
@@ -51,9 +56,11 @@
     left: 0;
     width: 100%;
     background: white;
+
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+
     padding: 0;
     overflow: hidden;
 
