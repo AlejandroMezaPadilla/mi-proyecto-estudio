@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -9,7 +9,7 @@ import Contacto from "./pages/Contacto";
 
 function App() {
   return (
-    <BrowserRouter basename="/mi-proyecto-estudio">
+    <HashRouter>
       <Navbar />
 
       <Routes>
@@ -19,7 +19,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
