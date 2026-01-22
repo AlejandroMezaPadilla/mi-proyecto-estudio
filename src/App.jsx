@@ -1,25 +1,30 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
-import Galeria from "./pages/Galeria";
-import Contacto from "./pages/Contacto";
+const Home = () => (
+  <>
+    <Hero />
+    <Gallery />
+  </>
+);
 
 function App() {
   return (
-    <HashRouter>
+    <>
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/galeria" element={<Galeria />} />
-        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/galeria" element={<Gallery />} />
+        <Route path="/contacto" element={<h2 className="page">Contacto próximamente</h2>} />
       </Routes>
 
       <Footer />
-    </HashRouter>
+    </>
   );
 }
 
