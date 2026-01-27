@@ -4,11 +4,13 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
+import Ubicacion from "./components/Ubicacion";
+import Contacto from "./pages/Contacto";
 
 const Home = () => (
   <>
     <Hero />
-    <Gallery />
+    <Ubicacion />
   </>
 );
 
@@ -20,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/galeria" element={<Gallery />} />
-        <Route path="/contacto" element={<h2 className="page">Contacto próximamente</h2>} />
+        <Route path="/contacto" element={<Contacto />} />
       </Routes>
 
       <Footer />

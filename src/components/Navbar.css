@@ -1,51 +1,31 @@
 .navbar {
-  background: white;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-
-  /* 🔒 Sticky */
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 3px solid #e91e63;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.navbar h2 {
-  color: #e91e63;
-  margin: 0;
-}
-
-/* ================= LINKS DESKTOP ================= */
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-weight: 500;
-  color: #333;
-}
-
-.nav-links a:hover {
-  color: #e91e63;
-}
-
-/* ================= BOTÓN HAMBURGUESA ================= */
 .menu-btn {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: #e91e63;
 }
 
-/* ================= 📱 MÓVIL ================= */
-@media (max-width: 768px) {
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
 
+/* 📱 MÓVIL */
+@media (max-width: 768px) {
   .menu-btn {
     display: block;
   }
@@ -56,17 +36,12 @@
     left: 0;
     width: 100%;
     background: white;
-
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-
-    padding: 0;
     overflow: hidden;
 
     max-height: 0;
     opacity: 0;
-
     transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 

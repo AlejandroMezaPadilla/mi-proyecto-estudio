@@ -9,16 +9,14 @@ const Navbar = () => {
     <nav className="navbar">
       <h2>Itzel Olgin</h2>
 
-      {/* Botón hamburguesa */}
       <button
         className="menu-btn"
         onClick={() => setOpen(!open)}
-        aria-label="Abrir menú"
+        aria-label="Menú"
       >
         ☰
       </button>
 
-      {/* Links */}
       <div className={`nav-links ${open ? "active" : ""}`}>
         <Link to="/" onClick={() => setOpen(false)}>Inicio</Link>
         <Link to="/galeria" onClick={() => setOpen(false)}>Galería</Link>
